@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import SearchResults from "./pages/SearchResults";
 import VideoDetails from "./pages/VideoDetails";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 
 export default function App() {
   return (

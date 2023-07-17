@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { fetchData } from "../utils/api";
 
-const Context = createContext();
+export const Context = createContext();
 
 const AppContext = (props) => {
   const [loading, setLoading] = useState(false);
@@ -12,7 +12,7 @@ const AppContext = (props) => {
   useEffect(() => {
     const fetchYoutubeDataByCategoty = async (category) => {
       setLoading(true);
-      const { contents } = "await fetchData(`search/?q=${category}`)";
+      const { contents } = await fetchData(`search/?q=${category}`);
       setLoading(false);
       setSearchResults(contents);
     };
@@ -22,16 +22,16 @@ const AppContext = (props) => {
 
   return (
     <Context.Provider
-      value={
-        (loading,
+      value={{
+        loading,
         setLoading,
         searchedCategory,
         setSearchedCategory,
         searchResults,
         setSearchResults,
         mobileMenu,
-        setMobileMenu)
-      }
+        setMobileMenu,
+      }}
     >
       {props.children}
     </Context.Provider>
