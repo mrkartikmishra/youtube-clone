@@ -1,3 +1,28 @@
+import { Route, Routes } from "react-router-dom";
+
+import Home from "./pages/Home";
+import SearchResults from "./pages/SearchResults";
+import VideoDetails from "./pages/VideoDetails";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 export default function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div className="flex flex-col h-screen">
+      <Header />
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route
+          path="/search-results/:searchTerm"
+          exact
+          element={<SearchResults />}
+        />
+        <Route
+          path="/video-details/:videoId"
+          exact
+          element={<VideoDetails />}
+        />
+      </Routes>
+    </div>
+  );
 }
