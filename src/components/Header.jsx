@@ -5,6 +5,7 @@ import { SlMenu } from "react-icons/sl";
 import { IoIosSearch } from "react-icons/io";
 import { RiVideoAddLine } from "react-icons/ri";
 import { FiBell } from "react-icons/fi";
+import { BiMicrophone } from "react-icons/bi";
 
 import { Context } from "../store/context";
 import logo from "../assets/yt-logo.png";
@@ -82,14 +83,20 @@ const Header = () => {
         <button className="flex items-center justify-center border border-l-0 border-secondary rounded-r-3xl bg-white/[0.1] w-[40px] md:w-[60px] h-8 md:h-10">
           <IoIosSearch className="text-white text-xl" />
         </button>
+        <div className="flex items-center justify-center h-10 w-10 rounded-full bg-secondary/[0.8] ml-2">
+          <BiMicrophone className="text-white text-xl cursor-pointer" />
+        </div>
       </div>
       {/** Right Section */}
       <div className="hidden md:flex items-center justify-between">
         <div className="flex items-center justify-center h-10 w-10 rounded-full hover:bg-secondary/[0.6]">
           <RiVideoAddLine className="text-white text-xl cursor-pointer" />
         </div>
-        <div className="flex items-center justify-center h-10 w-10 rounded-full hover:bg-secondary/[0.6] ml-2">
+        <div className="flex items-center justify-center h-10 w-10 rounded-full hover:bg-secondary/[0.6] ml-2 relative">
           <FiBell className="text-white text-xl cursor-pointer" />
+          <span className="flex items-center justify-center w-5 h-5 rounded-full bg-red text-white text-xs absolute top-0 right-0">
+            9+
+          </span>
         </div>
         <div className="flex items-center justify-center h-8 w-8 md:ml-4 cursor-pointer rounded-full hover:bg-secondary/[0.6]">
           <img

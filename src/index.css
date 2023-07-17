@@ -73,4 +73,20 @@ code {
   .custom-h {
     height: 100vh !important;
   }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(194, 194, 195);
+    border-radius: 10px;
+  }
 }
