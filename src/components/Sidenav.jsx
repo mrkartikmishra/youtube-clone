@@ -23,7 +23,11 @@ const Sidenav = () => {
   };
 
   return (
-    <div className="md:block w-[240px] overflow-y-auto h-full bg-primary absolute md:relative z-99 translate-x-[-240] md:translate-x-0 transition-all">
+    <div
+      className={`${
+        mobileMenu && "translate-x-0"
+      } md:block w-[240px] overflow-y-auto h-full bg-primary absolute md:relative z-50 translate-x-[-240px] md:translate-x-0 transition-all`}
+    >
       <div className="flex px-5 flex-col">
         {categories?.map((category) => {
           return (
