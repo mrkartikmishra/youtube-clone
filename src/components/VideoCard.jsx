@@ -7,7 +7,7 @@ import { abbreviateNumber } from "js-abbreviation-number";
 
 const VideoCard = ({ video }) => {
   return (
-    <Link to={`/video/${video?.videoId}`}>
+    <Link to={`/video-details/${video?.videoId}`}>
       <div className="flex flex-col mb-8 hover:scale-105 duration-500">
         <div className="h-48 md:h-40 md:rounded-xl overflow-hidden relative">
           <img

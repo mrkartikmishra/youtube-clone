@@ -83,8 +83,8 @@ const Header = () => {
         <button className="flex items-center justify-center border border-l-0 border-secondary rounded-r-3xl bg-white/[0.1] w-[40px] md:w-[60px] h-8 md:h-10">
           <IoIosSearch className="text-white text-xl" />
         </button>
-        <div className="flex items-center justify-center h-10 w-10 rounded-full bg-secondary/[0.8] ml-2">
-          <BiMicrophone className="text-white text-xl cursor-pointer" />
+        <div className="flex items-center justify-center h-10 w-10 rounded-full bg-secondary/[0.8] hover:bg-secondary cursor-pointer ml-2">
+          <BiMicrophone className="text-white text-xl" />
         </div>
       </div>
       {/** Right Section */}
