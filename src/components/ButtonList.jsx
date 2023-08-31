@@ -67,7 +67,7 @@ const buttons = [
 const ButtonList = () => {
   const { setSearchedCategory } = useContext(Context);
   return (
-    <div className="text-white xl:flex w-full gap-3 ml-5 overflow-x-scroll scrollbar-hide hidden">
+    <div className="hidden w-full gap-3 ml-5 overflow-x-scroll text-white xl:flex scrollbar-hide">
       {buttons.map((button) => (
         <span
           className="mr-2 bg-secondary/[0.8] hover:bg-secondary hover:text-white lg:py-1 lg:px-1 rounded-md cursor-pointer"

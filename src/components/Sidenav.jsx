@@ -28,7 +28,7 @@ const Sidenav = () => {
         mobileMenu && "translate-x-[0px]"
       } md:block w-[240px] overflow-y-auto h-full bg-primary absolute md:relative z-50 translate-x-[-240px] md:translate-x-0 transition-all`}
     >
-      <div className="flex px-5 flex-col">
+      <div className="flex flex-col px-5">
         {categories?.map((category) => {
           return (
             <React.Fragment key={category?.name}>

@@ -10,13 +10,13 @@ const SuggestionVideos = ({ video }) => {
       <div className="flex mb-3">
         <div className="relative h-24 rounded-xl bg-slate-800 overflow-hidden lg:h-20 xl:h-24 w-40 min-w-[168px] xl:w-40 xl:min-w-[168px] lg:w-32 lg:min-w-[128px]">
           <img
-            className="h-full w-full object-cover"
+            className="object-cover w-full h-full"
             src={video?.thumbnails[0]?.url}
           />
           {video?.lengthSeconds && <Videolength time={video?.lengthSeconds} />}
         </div>
-        <div className="overflow-hidden flex flex-col ml-3">
-          <span className=" font-bold line-clamp-2 text-white text-sm lg:text-xs xl:text-sm">
+        <div className="flex flex-col ml-3 overflow-hidden">
+          <span className="text-sm font-bold text-white  line-clamp-2 lg:text-xs xl:text-sm">
             {video?.title}
           </span>
           <span className="text-[12px] lg:text-[10px] xl:text-[12px] font-semibold mt-2 text-white/[0.7] flex items-center">

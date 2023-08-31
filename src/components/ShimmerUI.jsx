@@ -6,7 +6,7 @@ const ShimmerUI = () => {
       {Array(12)
         .fill()
         .map(() => (
-          <div className="flex flex-col mb- rounded-md">
+          <div className="flex flex-col rounded-md">
             <div className="h-40 md:h-40 md:rounded-xl overflow-hidden relative bg-secondary/[0.4]"></div>
             <div className="flex items-center">
               <span className="h-10 w-10 rounded-full md:h-12 md:w-12 md:rounded-full bg-secondary/[0.4]"></span>

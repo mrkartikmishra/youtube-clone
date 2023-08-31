@@ -34,11 +34,11 @@ const Header = () => {
   };
 
   return (
-    <div className="flex items-center justify-between h-14 px-4 md:px-5 bg-primary sticky top-0 z-99">
+    <div className="sticky top-0 flex items-center justify-between px-4 h-14 md:px-5 bg-primary z-99">
       {loading && <Loader />}
 
       {/** LOGO Section */}
-      <div className="h-5 flex items-center">
+      <div className="flex items-center h-5">
         {page !== "video" && (
           <div
             onClick={menuToggle}
@@ -51,14 +51,14 @@ const Header = () => {
             )}
           </div>
         )}
-        <Link to={"/"} className="h-5 flex items-center">
+        <Link to={"/"} className="flex items-center h-5">
           <img
             src={logo}
             alt="Youtube Logo"
-            className="h-full hidden md:block"
+            className="hidden h-full md:block"
           />
         </Link>
-        <Link to={"/"} className="h-5 flex items-center">
+        <Link to={"/"} className="flex items-center h-5">
           <img
             src={mobileLogo}
             alt="Youtube Logo"
@@ -68,9 +68,9 @@ const Header = () => {
       </div>
       {/** Search Bar */}
       <div className="flex items-center group">
-        <div className="flex h-8 md:h-10 md:ml-10 md:pl-5 border border-secondary rounded-l-3xl group-focus-within:border-red md:group-focus-within:ml-5 md:group-focus-within:pl-0">
-          <div className="w-10 hidden group-focus-within:md:flex items-center justify-center">
-            <IoIosSearch className="text-white text-xl" />
+        <div className="flex h-8 border md:h-10 md:ml-10 md:pl-5 border-secondary rounded-l-3xl group-focus-within:border-red md:group-focus-within:ml-5 md:group-focus-within:pl-0">
+          <div className="items-center justify-center hidden w-10 group-focus-within:md:flex">
+            <IoIosSearch className="text-xl text-white" />
           </div>
           <input
             type="text"
@@ -81,20 +81,20 @@ const Header = () => {
           />
         </div>
         <button className="flex items-center justify-center border border-l-0 border-secondary rounded-r-3xl bg-white/[0.1] w-[40px] md:w-[60px] h-8 md:h-10">
-          <IoIosSearch className="text-white text-xl" />
+          <IoIosSearch className="text-xl text-white" />
         </button>
         <div className="flex items-center justify-center h-10 w-10 rounded-full bg-secondary/[0.8] hover:bg-secondary cursor-pointer ml-2">
-          <BiMicrophone className="text-white text-xl" />
+          <BiMicrophone className="text-xl text-white" />
         </div>
       </div>
       {/** Right Section */}
-      <div className="hidden md:flex items-center justify-between">
+      <div className="items-center justify-between hidden md:flex">
         <div className="flex items-center justify-center h-10 w-10 rounded-full hover:bg-secondary/[0.6]">
-          <RiVideoAddLine className="text-white text-xl cursor-pointer" />
+          <RiVideoAddLine className="text-xl text-white cursor-pointer" />
         </div>
         <div className="flex items-center justify-center h-10 w-10 rounded-full hover:bg-secondary/[0.6] ml-2 relative">
-          <FiBell className="text-white text-xl cursor-pointer" />
-          <span className="flex items-center justify-center w-5 h-5 rounded-full bg-red text-white text-xs absolute top-0 right-0">
+          <FiBell className="text-xl text-white cursor-pointer" />
+          <span className="absolute top-0 right-0 flex items-center justify-center w-5 h-5 text-xs text-white rounded-full bg-red">
             9+
           </span>
         </div>

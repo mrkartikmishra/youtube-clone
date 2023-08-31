@@ -4,7 +4,7 @@ import moment from "moment";
 
 const Videolength = ({ time }) => {
   return (
-    <div className="absolute bottom-2 right-2 bg-primary py-1 px-2 text-white text-xs rounded-md">
+    <div className="absolute px-2 py-1 text-xs text-white rounded-md bottom-2 right-2 bg-primary">
       {moment().startOf("day").seconds(time).format("H:mm:ss")}
     </div>
   );

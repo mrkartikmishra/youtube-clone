@@ -8,25 +8,25 @@ import { abbreviateNumber } from "js-abbreviation-number";
 const VideoCard = ({ video }) => {
   return (
     <Link to={`/video-details/${video?.videoId}`}>
-      <div className="flex flex-col mb-8 hover:scale-105 duration-500">
-        <div className="h-52 md:h-48 md:rounded-xl overflow-hidden relative">
+      <div className="flex flex-col mb-8 duration-500 hover:scale-105">
+        <div className="relative overflow-hidden h-52 md:h-48 md:rounded-xl">
           <img
-            className="object-cover h-full w-full"
+            className="object-cover w-full h-full"
             src={video?.thumbnails?.[0]?.url}
           />
           {video?.lengthSeconds && <Videolength time={video?.lengthSeconds} />}
         </div>
-        <div className="flex text-white mt-3">
+        <div className="flex mt-3 text-white">
           <div className="flex items-start">
-            <div className="flex h-9 w-9 rounded-full overflow-hidden">
+            <div className="flex overflow-hidden rounded-full h-9 w-9">
               <img
-                className="w-full h-full object-cover"
+                className="object-cover w-full h-full"
                 src={video?.author?.avatar?.[0]?.url}
               />
             </div>
           </div>
           <div className="flex flex-col ml-3 overflow-hidden">
-            <span className="line-clamp-2 text-sm font-semibold">
+            <span className="text-sm font-semibold line-clamp-2">
               {video?.title}
             </span>
             <span className="text-xs font-semibold mt-2 text-white/[0.7] flex items-center">

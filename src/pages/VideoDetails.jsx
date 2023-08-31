@@ -49,21 +49,21 @@ const VideoDetails = () => {
               playing={true}
             />
           </div>
-          <div className="text-white font-bold text-sm md:text-xl mt-4">
+          <div className="mt-4 text-sm font-bold text-white md:text-xl">
             {video?.title}
           </div>
-          <div className="flex justify-between flex-col md:flex-row mt-4">
+          <div className="flex flex-col justify-between mt-4 md:flex-row">
             <div className="flex">
               <div className="flex items-start">
-                <div className="flex h-11 w-11 rounded-full overflow-hidden">
+                <div className="flex overflow-hidden rounded-full h-11 w-11">
                   <img
-                    className="h-full w-full object-cover"
+                    className="object-cover w-full h-full"
                     src={video?.author?.avatar[0]?.url}
                   />
                 </div>
               </div>
               <div className="flex flex-col ml-3">
-                <div className="text-white text-md font-semibold flex items-center">
+                <div className="flex items-center font-semibold text-white text-md">
                   {video?.author?.title}
                   {video?.author?.badges[0]?.type === "VERIFIED_CHANNEL" && (
                     <BsFillCheckCircleFill className="text-white/[0.5] text-[12px] ml-1" />
@@ -74,13 +74,13 @@ const VideoDetails = () => {
                 </div>
               </div>
             </div>
-            <div className="flex text-white mt-4 md:mt-0">
+            <div className="flex mt-4 text-white md:mt-0">
               <div className="flex items-center justify-center h-11 px-6 rounded-3xl bg-white/[0.15]">
-                <AiOutlineLike className="text-xl text-white mr-2" />
+                <AiOutlineLike className="mr-2 text-xl text-white" />
                 {`${abbreviateNumber(video?.stats?.views, 2)} Likes`}
               </div>
               <div className="flex items-center justify-center h-11 px-6 rounded-3xl bg-white/[0.15] ml-4">
-                <AiOutlineEye className="text-xl text-white mr-2" />
+                <AiOutlineEye className="mr-2 text-xl text-white" />
                 <span>{`${abbreviateNumber(
                   video?.stats?.views,
                   2
