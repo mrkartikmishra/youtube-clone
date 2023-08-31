@@ -34,7 +34,7 @@ const Header = () => {
   };
 
   return (
-    <div className="flex items-center justify-between h-14 px-4 md:px-5 bg-white dark:bg-primary sticky top-0 z-99">
+    <div className="flex items-center justify-between h-14 px-4 md:px-5 bg-primary sticky top-0 z-99">
       {loading && <Loader />}
 
       {/** LOGO Section */}
@@ -55,7 +55,7 @@ const Header = () => {
           <img
             src={logo}
             alt="Youtube Logo"
-            className="h-full hidden dark:md:block"
+            className="h-full hidden md:block"
           />
         </Link>
         <Link to={"/"} className="h-5 flex items-center">

@@ -25,7 +25,7 @@ const Sidenav = () => {
   return (
     <div
       className={`${
-        mobileMenu && "translate-x-0"
+        mobileMenu && "translate-x-[0px]"
       } md:block w-[240px] overflow-y-auto h-full bg-primary absolute md:relative z-50 translate-x-[-240px] md:translate-x-0 transition-all`}
     >
       <div className="flex px-5 flex-col">

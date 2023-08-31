@@ -49,7 +49,7 @@ const VideoDetails = () => {
               playing={true}
             />
           </div>
-          <div className="text-white font-bold text-sm md:text-xl mt-4 line-clamp-2">
+          <div className="text-white font-bold text-sm md:text-xl mt-4">
             {video?.title}
           </div>
           <div className="flex justify-between flex-col md:flex-row mt-4">
